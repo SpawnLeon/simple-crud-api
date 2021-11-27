@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
-import makeServer from '../index.js';
+import dotenv from 'dotenv';
+import makeServer from '../src/index.js';
 
-const SERVER_PORT = 3000;
-makeServer(SERVER_PORT);
+const DEFAULT_SERVER_PORT = 3000;
+
+dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
+
+const port = process.env.PORT || DEFAULT_SERVER_PORT;
+
+makeServer(port);
