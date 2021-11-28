@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/simple-crud-api.js",
-    "start:prod": "cross-env NODE_ENV=production webpack && ./dist/"
+    "start:prod": "cross-env NODE_ENV=development node ./bin/simple-crud-api.js"
   },
   "repository": {
     "type": "git",
