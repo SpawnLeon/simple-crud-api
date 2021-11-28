@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import dotenv from 'dotenv';
+
 import makeServer from '../src/index.js';
 
 const DEFAULT_SERVER_PORT = 3000;
