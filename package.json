@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/simple-crud-api.js",
-    "start:prod": "cross-env NODE_ENV=production node ./bin/simple-crud-api.js"
+    "start:prod": "cross-env NODE_ENV=production webpack && ./dist/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SpawnLeon/simple-crud-api/issues"
+  },
+  "engines": {
+    "node": ">=16.13.0"
   },
   "homepage": "https://github.com/SpawnLeon/simple-crud-api#readme",
   "dependencies": {
@@ -33,5 +36,8 @@
     "jest": "^27.3.1",
     "nodemon": "^2.0.15",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.4"
   }
 }

@@ -1,9 +1,9 @@
 import * as crypto from 'crypto';
 
-export default class User {
+export default class Person {
   constructor({
     id = crypto.randomUUID(),
-    name = 'USER',
+    name = 'PERSON',
     age = 0,
     hobbies = [],
   } = {}) {
